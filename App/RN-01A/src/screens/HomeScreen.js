@@ -1,10 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
     return (
-        <View>
+        <View style={{justifyContent: 'center', flex: 1, margin:20}}>
             <Text>HomeScreen</Text>
+            <Button title="Got to Bottom Navigator Page" onPress={() => navigation.navigate('BTabNScreen')}/>
         </View>
     );
 };
