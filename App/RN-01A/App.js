@@ -3,22 +3,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/screens/HomeScreen';
 import BTabNScreen from './src/screens/BTabNScreen';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import BTNScreenOne from './src/screens/BTNScreenOne';
-import BTNScreenTwo from './src/screens/BTNScreenTwo';
+import DrawerScreen from './src/screens/DrawerScreen';
 
 
 const Stack = createStackNavigator();
-const Tab = createBottomTabNavigator();
 
-function TabNav() {
-  return(
-    <Tab.Navigator>
-      <Tab.Screen name="One" component={BTNScreenOne}/>
-      <Tab.Screen name="Two" component={BTNScreenTwo}/>
-    </Tab.Navigator>
-  );
-};
 
 export default function App() {
   return (
@@ -26,7 +15,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
         <Stack.Screen name="BTabNScreen" component={BTabNScreen} />
-        <Stack.Screen name="BTNScreen" component={TabNav} />
+        <Stack.Screen name="DrawerScreen" component={DrawerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

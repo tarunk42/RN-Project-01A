@@ -6,6 +6,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={{justifyContent: 'center', flex: 1, margin:20}}>
             <Text>HomeScreen</Text>
             <Button title="Got to Bottom Navigator Page" onPress={() => navigation.navigate('BTabNScreen')}/>
+            <Button title="Got to Drawer Navigator Page" onPress={() => navigation.navigate('DrawerScreen')}/>
         </View>
     );
 };

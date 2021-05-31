@@ -1,16 +1,19 @@
 import React from 'react';
 import { Button, StyleSheet, Text, View } from 'react-native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import BTNScreenOne from './BTNScreenOne';
+import BTNScreenTwo from './BTNScreenTwo';
 
-function BTabNScreen({ navigation }) {
-    return (
-        <View style={{flex: 1, justifyContent: 'space-around', alignItems: 'center', margin: 10}}>
-            <Text>Just here for nothing doing nothing.</Text>
-            <Button title="Go On" onPress={() => navigation.navigate('BTNScreen')}/>
-        </View>
-    
-    );
+
+const Tab = createBottomTabNavigator();
+
+export default function BTabNScreen() {
+  return(
+    <Tab.Navigator>
+      <Tab.Screen name="One" component={BTNScreenOne}/>
+      <Tab.Screen name="Two" component={BTNScreenTwo}/>
+    </Tab.Navigator>
+  );
 };
 
-export default BTabNScreen;
 
-const styles = StyleSheet.create({});
